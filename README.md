@@ -26,7 +26,7 @@
 </p>
 
 <p>
-  <a href="https://pulse-api-studio.vercel.app/"><strong>🚀 Live Demo</strong></a> •
+  <a href="https://pulse-api-studio-henna.vercel.app/"><strong>🚀 Live Demo</strong></a> •
   <a href="#-key-features"><strong>✨ Features</strong></a> •
   <a href="#-system-architecture"><strong>🏗️ Architecture</strong></a> •
   <a href="#-quick-start"><strong>⚡ Quick Start</strong></a> •
