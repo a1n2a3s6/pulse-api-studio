@@ -1,3 +1,8 @@
+ده الكلام! حفظت النظام الجديد ده عندي عشان من النهاردة كل مشروع يجيلك بـ **`README.md` فخم بمستوى مشاريع الـ Open Source الكبيرة** (Hero في النص، Badges ديناميكية بتعد الـ Stars، جدول مقارنة، رسمة معمارية بتترسم تلقائياً على GitHub بـ Mermaid، اختصارات كيبورد، وزرار Deploy بضغطة واحدة على Vercel).
+
+انسخ ملف الـ **`README.md`** التحفة ده لمشروع **`pulse-api-studio`** (اليوم 7 / 365):
+
+```markdown
 <div align="center">
 
 # ⚡ PulseAPI Studio
@@ -101,3 +106,111 @@ flowchart LR
     D -->|Status + Headers + Body + Latency| B
     B -->|CORS-Enabled JSON Telemetry| A
     A <--> E[("💾 Local-First Storage\nCollections • Envs • History")]
+
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+pulse-api-studio/
+├── api/
+│   └── proxy.ts               # Vercel Serverless CORS Proxy & latency telemetry
+├── src/
+│   ├── types/
+│   │   └── api.ts             # Strict TypeScript domain models
+│   ├── utils/
+│   │   ├── codeGen.ts         # cURL, Fetch, Axios & Python snippet generator
+│   │   └── storage.ts         # Local-first persistence & JSON import/export
+│   ├── components/
+│   │   ├── Sidebar.tsx        # Collections tree, History & Env switcher
+│   │   ├── RequestBar.tsx     # Method picker, URL bar, Proxy toggle & Send
+│   │   ├── RequestTabs.tsx    # Params, Headers, Auth & JSON Body editor
+│   │   ├── ResponsePanel.tsx  # Status, Latency/Size HUD, Pretty/Raw/Headers
+│   │   └── CodeModal.tsx      # Multi-language snippet preview & copy modal
+│   ├── App.tsx                # Multi-tab workspace & global shortcuts
+│   ├── main.tsx
+│   └── index.css
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── vercel.json
+
+```
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+| --- | --- |
+| `Ctrl` / `Cmd` + `Enter` | Send active HTTP request |
+| `Ctrl` / `Cmd` + `S` | Save active request to Collection |
+| `Ctrl` / `Cmd` + `K` | Focus URL bar / Quick search |
+
+---
+
+## ⚡ Quick Start (Local Development)
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/a1n2a3s6/pulse-api-studio.git](https://github.com/a1n2a3s6/pulse-api-studio.git)
+
+# 2. Navigate into the project directory
+cd pulse-api-studio
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the Vite development server
+npm run dev
+
+```
+
+> **Note:** To run the `/api/proxy.ts` serverless function locally alongside Vite, run `npx vercel dev`.
+
+---
+
+## ☁️ One-Click Deploy
+
+Deploy your own instance of **PulseAPI Studio** (Frontend + Serverless CORS Proxy) to Vercel in under 60 seconds with zero configuration:
+
+---
+
+## 🗺️ Roadmap
+
+* [x] Multi-tab REST client with Params, Headers, Auth & JSON Body
+* [x] Built-in Vercel Serverless CORS Proxy with latency & payload metrics
+* [x] Multi-language code generation (`cURL`, `fetch`, `Axios`, `Python`)
+* [ ] GraphQL query & schema introspection support
+* [ ] WebSocket & Server-Sent Events (SSE) live stream tester
+* [ ] OpenAPI / Swagger 3.0 spec importer
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are always welcome!
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feat/amazing-feature`)
+3. Commit your changes (`git commit -m "feat: add amazing feature"`)
+4. Push to the branch (`git push origin feat/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. Free to use, modify, and self-host.
+
+---
+
+### 👨‍💻 Author & Connect
+
+Built with passion by **Anas Alhelaly** — *Day 7 of my **365 Projects in 365 Days** GitHub Challenge*
+
+⭐ **If you find PulseAPI Studio useful, consider giving the repo a Star!** ⭐
+
